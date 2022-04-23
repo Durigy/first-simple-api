@@ -11,9 +11,9 @@ data = [
     {"name": "lucy", "age": 53}
 ]
 
-print("PUT request")
+print("POST request")
 for i in range(len(data)):
-    response = requests.put(BASE + str(i+1), data[i])
+    response = requests.post(BASE + str(i+1), data[i])
     print(response.json())
 
 print()

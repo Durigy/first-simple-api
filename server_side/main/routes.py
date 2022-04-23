@@ -23,7 +23,7 @@ class Name(Resource):
         return result
 
     @marshal_with(resource_fields)
-    def put(self, name_id):
+    def post(self, name_id):
         args = name_put_args.parse_args()
 
         result = Names.query.filter_by(id=name_id).first()
